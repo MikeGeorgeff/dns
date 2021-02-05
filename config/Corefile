@@ -1,0 +1,12 @@
+georgeff.io:53 {
+    file /root/db.georgeff.io
+    log
+    errors
+}
+
+.:53 {
+    log
+    errors
+    cache
+    forward . 1.1.1.1 1.0.0.1
+}

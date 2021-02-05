@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  dns:
+    image: coredns/coredns
+    volumes:
+      - ./config/:/root/
+    command: ["-conf", "/root/Corefile"]
+    restart: always
+    ports:
+      - 10.3.3.100:53:53/udp
